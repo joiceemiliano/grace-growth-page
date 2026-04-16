@@ -176,22 +176,6 @@ function Index() {
         </div>
       </Section>
 
-      {/* ROTA DA PRIMEIRA VENDA */}
-      <Section className="bg-background">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">RPV</span>
-          <h2 className="mt-3 text-3xl md:text-5xl">
-            Rota da Primeira Venda <span className="italic">para a área da beleza</span>
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground">
-            Um caminho direto, validado e prático. Do produto à venda — sem achismos.
-          </p>
-          <div className="mt-10">
-            <CTA>Quero conhecer a Rota</CTA>
-          </div>
-        </div>
-      </Section>
-
       {/* PARA QUEM É */}
       <Section className="bg-[var(--cream)]">
         <div className="text-center">
