@@ -199,8 +199,7 @@ function Index() {
       <Section className="bg-background">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">Conteúdo</span>
-            <h2 className="mt-3 text-3xl md:text-5xl">O que você vai receber</h2>
+            <h2 className="text-3xl md:text-5xl">O que você vai receber</h2>
             <ul className="mt-8 space-y-5">
               {[
                 { icon: ShoppingBag, t: "Como criar seu produto digital", d: "Passo a passo do zero, mesmo sem experiência." },
@@ -218,6 +217,7 @@ function Index() {
                 </li>
               ))}
             </ul>
+            <h3 className="mt-10 text-2xl md:text-3xl">Você terá acesso imediato a...</h3>
           </div>
           <div>
             <img src={mockup2} alt="Mockup completo do produto com bônus" className="w-full drop-shadow-2xl" loading="lazy" />
