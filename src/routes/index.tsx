@@ -12,7 +12,7 @@ import {
   Lightbulb,
   Shield,
   ChevronDown,
-  MessageCircle,
+  
   Star,
 } from "lucide-react";
 import mockup1 from "@/assets/mockup-1.jpeg";
