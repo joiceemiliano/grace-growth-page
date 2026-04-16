@@ -122,15 +122,6 @@ function Index() {
             <CTA>Quero vender meu primeiro produto digital</CTA>
             <p className="text-xs text-muted-foreground">✓ Acesso imediato • ✓ 7 dias de garantia</p>
           </div>
-
-          <div className="mt-16 animate-float">
-            <img
-              src={mockup1}
-              alt="Mockup do produto Rota da Primeira Venda — livro, tablet e notebook"
-              className="mx-auto w-full max-w-3xl drop-shadow-2xl"
-              loading="eager"
-            />
-          </div>
         </div>
       </header>
 
@@ -142,6 +133,14 @@ function Index() {
             Como transformar o que você já faz na beleza em um produto digital que vende
           </p>
           <div className="mt-10"><CTA>Quero descobrir o método</CTA></div>
+          <div className="mt-16 animate-float">
+            <img
+              src={mockup1}
+              alt="Mockup do produto Rota da Primeira Venda — livro, tablet e notebook"
+              className="mx-auto w-full max-w-3xl drop-shadow-2xl"
+              loading="eager"
+            />
+          </div>
         </div>
       </Section>
 
