@@ -72,11 +72,13 @@
   --primary: oklch(0.66 0.07 150);
   --primary-foreground: oklch(1 0 0);
   --primary-deep: oklch(0.48 0.07 150);
-  --olive: oklch(0.66 0.07 150);
-  --olive-dark: oklch(0.42 0.06 150);
-  --cream: oklch(0.985 0.01 90);
-  --gradient-hero: linear-gradient(135deg, oklch(0.98 0.01 150) 0%, oklch(0.94 0.03 150) 100%);
-  --gradient-cta: linear-gradient(135deg, var(--olive) 0%, var(--olive-dark) 100%);
+  --olive: oklch(0.55 0.06 125);
+  --olive-dark: oklch(0.42 0.06 125);
+  --olive-soft: oklch(0.96 0.025 125);
+  --cream: oklch(0.97 0 0);
+  --cta: #64CE87;
+  --cta-hover: #4DB874;
+  --gradient-hero: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
   --shadow-soft: 0 10px 40px -10px oklch(0.42 0.06 150 / 0.25);
   --shadow-premium: 0 20px 60px -20px oklch(0.18 0.01 150 / 0.3);
   --font-display: 'Cinzel', Georgia, serif;

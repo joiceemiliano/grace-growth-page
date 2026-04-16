@@ -61,8 +61,7 @@ function CTA({ children, className = "", href = CHECKOUT_URL }: { children: Reac
     <a
       href={href}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
-      style={{ background: "var(--gradient-cta)" }}
+      className={`cta-btn inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
     >
       {children}
       <Sparkles className="h-4 w-4" />
