@@ -109,7 +109,7 @@ function Index() {
         <div className="mx-auto max-w-5xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--olive)]/30 bg-white/60 px-4 py-1.5 text-xs font-medium tracking-wide text-[var(--olive-dark)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
-            MÉTODO JOICE EMILIANO • RPV
+            ROTA DA PRIMEIRA VENDA
           </div>
           <h1 className="animate-fade-up text-4xl leading-[1.1] md:text-6xl lg:text-7xl">
             Venda seu primeiro produto digital da beleza em até{" "}
@@ -136,14 +136,19 @@ function Index() {
 
       {/* O QUE VOCÊ VAI DESCOBRIR */}
       <Section className="bg-background">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">O Método</span>
-          <h2 className="mt-3 text-3xl md:text-5xl">
-            Como transformar o que você já faz na beleza em um <span className="italic">produto digital que vende</span>
-          </h2>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-5xl">O que você vai descobrir</h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Você não precisa reinventar a roda. Precisa de um caminho claro — e é isso que a RPV entrega.
+            Como transformar o que você já faz na beleza em um produto digital que vende
           </p>
+          <div className="mt-12">
+            <img
+              src={mockup2}
+              alt="Mockup do produto Rota da Primeira Venda"
+              className="mx-auto w-full max-w-2xl drop-shadow-2xl"
+              loading="lazy"
+            />
+          </div>
           <div className="mt-10"><CTA>Quero descobrir o método</CTA></div>
         </div>
       </Section>
@@ -251,13 +256,17 @@ function Index() {
             <h2 className="mt-3 text-3xl md:text-5xl">
               O que torna a <span className="italic">Rota da Primeira Venda</span> única
             </h2>
-            <p className="mt-4 text-muted-foreground">
-              Conheça a ISA — a IA treinada com o método da Joice para te ajudar 24h por dia.
+            <p className="mt-4 text-lg text-muted-foreground">
+              Sua assistente de IA para criar seu produto digital da beleza
             </p>
             <ul className="mt-6 space-y-3">
-              {["Ideias de produto sob medida", "Estrutura completa do seu método", "Ofertas irresistíveis em minutos"].map((b) => (
+              {[
+                "Ideias de produtos baseados no que você já faz na beleza",
+                "Estruture seu método",
+                "Aprenda como gerar ofertas irresistíveis",
+              ].map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--olive)] text-white">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--olive)] text-white">
                     <Check className="h-3.5 w-3.5" />
                   </div>
                   <span className="text-foreground">{b}</span>
@@ -277,16 +286,44 @@ function Index() {
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {[
-            { n: "Bônus 01", t: "Guia prático de venda", d: "Um material direto ao ponto para você aplicar no mesmo dia.", icon: Lightbulb },
-            { n: "Bônus 02", t: "Scripts de conversão", d: "Mensagens prontas que transformam conversas em vendas.", icon: Megaphone },
-          ].map(({ n, t, d, icon: Icon }) => (
+            {
+              n: "Bônus 01",
+              t: "Guia Prático de Venda",
+              sub: "com aplicação passo a passo",
+              items: [
+                "O que falar para gerar interesse",
+                "Como levar sem travar",
+                "Como fechar com naturalidade",
+              ],
+              icon: Lightbulb,
+            },
+            {
+              n: "Bônus 02",
+              t: "Scripts de Conversão",
+              sub: "",
+              items: [
+                "Frases prontas para atrair clientes no Instagram",
+                "Conversas que conduzem para o fechamento no WhatsApp",
+                "Estrutura simples para transformar interesse em venda",
+              ],
+              icon: Megaphone,
+            },
+          ].map(({ n, t, sub, items, icon: Icon }) => (
             <div key={t} className="group relative overflow-hidden rounded-3xl border border-border bg-[var(--cream)] p-8 transition-all hover:shadow-[var(--shadow-soft)]">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[var(--olive)]/10 transition-transform group-hover:scale-125" />
               <div className="relative">
                 <Icon className="mb-4 h-8 w-8 text-[var(--olive-dark)]" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">{n}</p>
                 <h3 className="mt-2 text-2xl">{t}</h3>
-                <p className="mt-3 text-muted-foreground">{d}</p>
+                {sub && <p className="mt-1 text-sm italic text-muted-foreground">{sub}</p>}
+                <ul className="mt-4 space-y-2">
+                  {items.map((it) => (
+                    <li key={it} className="flex items-start gap-2 text-sm text-foreground">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--olive-dark)]" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
