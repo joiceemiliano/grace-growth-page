@@ -21,6 +21,7 @@ import mentora from "@/assets/mentora.jpeg";
 import dep1 from "@/assets/depoimento-1.jpeg";
 import dep2 from "@/assets/depoimento-2.jpeg";
 import dep3 from "@/assets/depoimento-3.jpeg";
+import isa from "@/assets/isa.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -45,20 +46,22 @@ export const Route = createFileRoute("/")({
     links: [
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap",
       },
     ],
   }),
 });
 
-const CHECKOUT_URL = "#oferta";
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Rota%20da%20Primeira%20Venda";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/VstmIem";
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5522996197544&text=Ol%C3%A1%2C+vim+pelo+site+e+tenho+algumas+duvidas&type=phone_number&app_absent=0";
 
 function CTA({ children, className = "", href = CHECKOUT_URL }: { children: React.ReactNode; className?: string; href?: string }) {
+  const isExternal = href.startsWith("http");
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
       style={{ background: "var(--gradient-cta)" }}
     >
       {children}
@@ -248,17 +251,15 @@ function Index() {
           <div className="order-2 md:order-1">
             <div className="relative mx-auto max-w-sm">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--olive)] to-[var(--olive-dark)] blur-2xl opacity-30" />
-              <div className="relative rounded-3xl bg-gradient-to-br from-[var(--olive-dark)] to-[var(--foreground)] p-10 text-center text-white shadow-[var(--shadow-premium)]">
-                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur">
-                  <Sparkles className="h-8 w-8" />
-                </div>
-                <h3 className="text-3xl text-white">ISA</h3>
-                <p className="mt-1 text-sm text-white/70">Sua Agente de IA exclusiva</p>
-                <div className="mt-6 space-y-2 text-left text-sm text-white/80">
-                  <p>"Me ajuda a criar uma oferta..."</p>
-                  <p className="rounded-xl bg-white/10 p-3">✨ Claro! Vamos estruturar uma oferta irresistível para sua audiência da beleza...</p>
-                </div>
-              </div>
+              <img
+                src={isa}
+                alt="ISA — sua assistente de IA exclusiva"
+                className="relative w-full rounded-3xl shadow-[var(--shadow-premium)]"
+                loading="lazy"
+              />
+              <p className="mt-4 text-center text-sm font-semibold uppercase tracking-widest text-[var(--olive-dark)]">
+                Sua mentora digital
+              </p>
             </div>
           </div>
           <div className="order-1 md:order-2">

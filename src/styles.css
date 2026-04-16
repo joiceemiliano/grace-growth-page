@@ -79,8 +79,8 @@
   --gradient-cta: linear-gradient(135deg, var(--olive) 0%, var(--olive-dark) 100%);
   --shadow-soft: 0 10px 40px -10px oklch(0.42 0.06 150 / 0.25);
   --shadow-premium: 0 20px 60px -20px oklch(0.18 0.01 150 / 0.3);
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-sans: 'Montserrat', system-ui, sans-serif;
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -155,8 +155,14 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
+    font-weight: 600;
     letter-spacing: -0.02em;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
   }
 }
 
