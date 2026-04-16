@@ -180,3 +180,7 @@
 
 .animate-float { animation: float 4s ease-in-out infinite; }
 .animate-fade-up { animation: fade-up 0.8s ease-out both; }
+
+.cta-btn { background-color: var(--cta); }
+.cta-btn:hover { background-color: var(--cta-hover); }
+
