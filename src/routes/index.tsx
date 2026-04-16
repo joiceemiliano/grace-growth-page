@@ -61,8 +61,7 @@ function CTA({ children, className = "", href = CHECKOUT_URL }: { children: Reac
     <a
       href={href}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
-      style={{ background: "var(--gradient-cta)" }}
+      className={`cta-btn inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-[var(--shadow-soft)] transition-all hover:scale-[1.02] hover:shadow-[var(--shadow-premium)] ${className}`}
     >
       {children}
       <Sparkles className="h-4 w-4" />
@@ -145,6 +144,7 @@ function Index() {
           <p className="mt-6 text-lg text-muted-foreground">
             Você não precisa reinventar a roda. Precisa de um caminho claro — e é isso que a RPV entrega.
           </p>
+          <div className="mt-10"><CTA>Quero descobrir o método</CTA></div>
         </div>
       </Section>
 
@@ -213,9 +213,8 @@ function Index() {
             </div>
           ))}
         </div>
+        <div className="mt-12 text-center"><CTA>Quero entrar para a RPV</CTA></div>
       </Section>
-
-      {/* O QUE VOCÊ VAI RECEBER */}
       <Section className="bg-background">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
@@ -243,6 +242,7 @@ function Index() {
             <img src={mockup2} alt="Mockup completo do produto com bônus" className="w-full drop-shadow-2xl" loading="lazy" />
           </div>
         </div>
+        <div className="mt-12 text-center"><CTA>Quero receber tudo isso</CTA></div>
       </Section>
 
       {/* DIFERENCIAL — IA */}
@@ -280,6 +280,7 @@ function Index() {
                 </li>
               ))}
             </ul>
+            <div className="mt-8"><CTA>Quero acesso à ISA</CTA></div>
           </div>
         </div>
       </Section>
@@ -306,9 +307,8 @@ function Index() {
             </div>
           ))}
         </div>
+        <div className="mt-12 text-center"><CTA>Quero garantir os bônus</CTA></div>
       </Section>
-
-      {/* OFERTA */}
       <Section id="oferta" className="bg-gradient-to-b from-[var(--cream)] to-background">
         <div className="mx-auto max-w-2xl rounded-[2rem] border border-[var(--olive)]/30 bg-white p-8 text-center shadow-[var(--shadow-premium)] md:p-14">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[var(--olive)]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">
@@ -362,11 +362,10 @@ function Index() {
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Para a 1ª venda</p>
               </div>
             </div>
+            <div className="mt-8"><CTA>Quero ser aluna da Joice</CTA></div>
           </div>
         </div>
       </Section>
-
-      {/* FAQ */}
       <Section className="bg-[var(--cream)]">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
