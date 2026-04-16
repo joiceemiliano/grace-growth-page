@@ -141,14 +141,6 @@ function Index() {
           <p className="mt-6 text-lg text-muted-foreground">
             Como transformar o que você já faz na beleza em um produto digital que vende
           </p>
-          <div className="mt-12">
-            <img
-              src={mockup2}
-              alt="Mockup do produto Rota da Primeira Venda"
-              className="mx-auto w-full max-w-2xl drop-shadow-2xl"
-              loading="lazy"
-            />
-          </div>
           <div className="mt-10"><CTA>Quero descobrir o método</CTA></div>
         </div>
       </Section>
