@@ -21,6 +21,7 @@ import mentora from "@/assets/mentora.jpeg";
 import dep1 from "@/assets/depoimento-1.jpeg";
 import dep2 from "@/assets/depoimento-2.jpeg";
 import dep3 from "@/assets/depoimento-3.jpeg";
+import isa from "@/assets/isa.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -45,14 +46,14 @@ export const Route = createFileRoute("/")({
     links: [
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap",
       },
     ],
   }),
 });
 
-const CHECKOUT_URL = "#oferta";
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Rota%20da%20Primeira%20Venda";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/VstmIem";
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5522996197544&text=Ol%C3%A1%2C+vim+pelo+site+e+tenho+algumas+duvidas&type=phone_number&app_absent=0";
 
 function CTA({ children, className = "", href = CHECKOUT_URL }: { children: React.ReactNode; className?: string; href?: string }) {
   return (
