@@ -247,9 +247,9 @@ function Index() {
             </div>
           </div>
           <div className="order-1 md:order-2">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">Exclusivo</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--olive-dark)]">Nosso diferencial</span>
             <h2 className="mt-3 text-3xl md:text-5xl">
-              Sua <span className="italic">assistente de IA</span> para criar seu produto digital
+              O que torna a <span className="italic">Rota da Primeira Venda</span> única
             </h2>
             <p className="mt-4 text-muted-foreground">
               Conheça a ISA — a IA treinada com o método da Joice para te ajudar 24h por dia.
