@@ -181,7 +181,7 @@ function Index() {
           {[
             { icon: Scissors, t: "Profissionais da beleza", d: "Cabeleireiras, maquiadoras, manicures, designers e mais." },
             { icon: Rocket, t: "Quem quer sair do zero", d: "Mesmo sem audiência, sem produto e sem experiência digital." },
-            { icon: Clock, t: "Quem trabalha muito e ganha pouco", d: "Hora de escalar com produto digital, não trocar tempo por dinheiro." },
+            { icon: Clock, t: "Para quem já atende muito, mas quer crescer além do atendimento", d: "Hora de escalar com produto digital, não trocar tempo por dinheiro." },
             { icon: Heart, t: "Quem quer liberdade", d: "Trabalhar de qualquer lugar e construir uma renda que não para." },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="rounded-2xl border border-border bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
