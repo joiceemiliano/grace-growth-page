@@ -112,14 +112,14 @@ function Index() {
             ROTA DA PRIMEIRA VENDA
           </div>
           <h1 className="animate-fade-up text-4xl leading-[1.1] md:text-6xl lg:text-7xl">
-            Venda seu primeiro produto digital da beleza em até{" "}
-            <span className="italic text-[var(--olive-dark)]">7 dias</span> — mesmo sem muitos seguidores
+            Você já atingiu sucesso no mercado de beleza. Agora é hora de{" "}
+            <span className="italic text-[var(--olive-dark)]">vender seu conhecimento</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Se você é profissional da beleza e sente que trabalha muito mas não cresce, aqui você vai aprender a transformar o que já faz em um produto digital que vende.
+            Transforme sua experiência em um produto digital em apenas 7 dias e crie uma nova fonte de renda sem depender da agenda lotada.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
-            <CTA>Quero vender meu primeiro produto digital</CTA>
+            <CTA href="#oferta">Quero vender meu primeiro produto digital</CTA>
             <p className="text-xs text-muted-foreground">✓ Acesso imediato • ✓ 7 dias de garantia</p>
           </div>
         </div>
@@ -181,7 +181,7 @@ function Index() {
           {[
             { icon: Scissors, t: "Profissionais da beleza", d: "Cabeleireiras, maquiadoras, manicures, designers e mais." },
             { icon: Rocket, t: "Quem quer sair do zero", d: "Mesmo sem audiência, sem produto e sem experiência digital." },
-            { icon: Clock, t: "Quem trabalha muito e ganha pouco", d: "Hora de escalar com produto digital, não trocar tempo por dinheiro." },
+            { icon: Clock, t: "Para quem já atende muito, mas quer crescer além do atendimento", d: "Hora de escalar com produto digital, não trocar tempo por dinheiro." },
             { icon: Heart, t: "Quem quer liberdade", d: "Trabalhar de qualquer lugar e construir uma renda que não para." },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="rounded-2xl border border-border bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
